@@ -19,6 +19,7 @@ class MainWindow(QWidget):
         self.resize(win_width, win_height)
         self.move(win_x, win_y)
 
+    #Setup widget and layout
     def initUI(self):
         self.hello_text = QLabel(txt_hello)
         self.instruction = QLabel(txt_instruction)
@@ -34,9 +35,9 @@ class MainWindow(QWidget):
     def connects(self):
         self.button.clicked.connect(self.next_click)
 
-    def connects(self):
-        self.hide()
+    def next_click(self):
         self.second_Win = TestWin()
+        self.hide()
 
 app = QApplication([])
 mw = MainWindow()
